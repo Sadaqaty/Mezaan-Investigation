@@ -1,12 +1,10 @@
 import requests
 from datetime import datetime
 
-# === CONFIGURATION ===
 API_KEY = "AIzaSyDQsXbqmP-LlT6Msh_aLfTUXs2WmpTnd6w"
 LOG_FILE = "logs.txt"
 VALID_SERVICES_FILE = "valid_services.txt"
 
-# === KNOWN GOOGLE SERVICE ENDPOINTS TO TEST ===
 google_apis = {
     "Geocoding API": "https://maps.googleapis.com/maps/api/geocode/json?address=New+York&key={}",
     "Elevation API": "https://maps.googleapis.com/maps/api/elevation/json?locations=39.7391536,-104.9847034&key={}",
@@ -24,14 +22,12 @@ google_apis = {
     "Drive API": "https://www.googleapis.com/drive/v3/about?fields=*&&key={}"
 }
 
-# === UTILITY: Logging ===
 def log(message):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open(LOG_FILE, "a") as log_file:
         log_file.write(f"[{timestamp}] {message}\n")
     print(f"[{timestamp}] {message}")
 
-# === START OF SCRIPT ===
 log("=== Google API Key Validation Script Started ===")
 log(f"Testing API key: {API_KEY[:10]}... (truncated for security)")
 
@@ -43,15 +39,14 @@ for name, endpoint in google_apis.items():
     try:
         response = requests.get(url)
         if response.status_code == 200 and "error" not in response.text.lower():
-            log(f"✅ {name} is working.")
+            log(f"{name} is working.")
             valid_services.append(name)
         else:
             log(f"❌ {name} is not accessible or not authorized.")
             log(f"↪ Status: {response.status_code}, Body snippet: {response.text[:100]}...")
     except Exception as e:
-        log(f"⚠️ Error checking {name}: {str(e)}")
+        log(f"Error checking {name}: {str(e)}")
 
-# === RESULTS OUTPUT ===
 if valid_services:
     log("=== Valid Services Found ===")
     with open(VALID_SERVICES_FILE, "w") as f:
@@ -61,4 +56,4 @@ if valid_services:
 else:
     log("No valid services found with this API key.")
 
-log("=== Script Completed ===")
+log("Script Completed")
