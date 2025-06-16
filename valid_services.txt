@@ -1,0 +1,18 @@
+Valid Google Services for API Key:
+
+hecking Google API key against known services...
+
+[-] Geocoding API ❌
+[-] Maps Elevation API ❌
+[-] Maps Directions API ❌
+[-] Maps Distance Matrix API ❌
+[-] Maps Places API ❌
+[-] Maps Static API ❌
+[-] YouTube Data API v3 ❌
+[-] Books API ❌
+[-] Calendar API ❌
+[-] Custom Search API ❌
+[-] Translate API ❌
+[-] Vision API ❌
+[-] Gmail API ❌
+[-] Drive API ❌
