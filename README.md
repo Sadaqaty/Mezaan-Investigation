@@ -20,6 +20,19 @@ This repository contains the results of an investigation into a malicious APK fi
 - **File Size:** 8.7MB (notably larger than legitimate banking apps)
 - **Certificate:** Self-signed (no valid digital signature)
 
+### 🔒 API Key Forensics: AIzaSyDQsXbqmP-LlT6Msh_aLfTUXs2WmpTnd6w
+
+- **Source Found**: Extracted from `scam_extracted/classes2.dex`
+- **Type**: Google API Key (appears valid in format)
+- **Size**: 39 characters
+- **Test Date**: 2025-06-16
+- **Test Performed**: Full scan against ~15 major Google services (Maps, YouTube, Translate, Books, Calendar, Drive, Gmail, etc.)
+- **Tools Used**: Custom Python script with full logging
+- **Outcome**: ❌ No active Google services were accessible.
+- **Likely Reason**: API key is either revoked, restricted to specific IP/domain, or lacks project billing.
+
+📁 See `logs.txt` for full breakdown.
+
 ### 2. Repository Contents
 
 ```
