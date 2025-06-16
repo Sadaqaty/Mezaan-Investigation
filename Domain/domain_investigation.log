@@ -1,0 +1,9 @@
+2025-06-17 01:34:08,421 - INFO - ====== Starting Domain Investigation ======
+2025-06-17 01:34:08,421 - INFO - Parsed domain/IP: 43.154.209.241
+2025-06-17 01:34:08,421 - INFO - Resolved IP: 43.154.209.241
+2025-06-17 01:34:10,182 - INFO - WHOIS info saved to whois_info.txt
+2025-06-17 01:34:12,283 - INFO - IP Geolocation info saved to ip_geolocation.txt
+2025-06-17 01:34:21,657 - INFO - HTTP response headers saved.
+2025-06-17 01:34:21,657 - INFO - Skipping SSL cert check (non-HTTPS URL)
+2025-06-17 01:34:21,657 - INFO - VirusTotal check skipped.
+2025-06-17 01:34:21,658 - INFO - ====== Investigation Complete ======

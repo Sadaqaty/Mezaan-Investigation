@@ -1,0 +1,8 @@
+Status Code: 200
+Server: nginx/1.18.0 (Ubuntu)
+Date: Mon, 16 Jun 2025 21:04:12 GMT
+Content-Type: application/vnd.android.package-archive
+Content-Length: 5543886
+Connection: keep-alive
+Content-Description: File Transfer
+Content-Disposition: attachment; filename="Meezan-A.apk"
