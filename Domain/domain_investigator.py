@@ -8,7 +8,6 @@ import datetime
 from urllib.parse import urlparse
 from ipwhois import IPWhois
 
-# ---------------- Logging Setup ----------------
 logging.basicConfig(
     filename='domain_investigation.log',
     level=logging.INFO,
@@ -17,23 +16,19 @@ logging.basicConfig(
 
 logging.info("====== Starting Domain Investigation ======")
 
-# ------------- Input --------------
 url = "http://43.154.209.241/You-Meezan/download.php?file=Meezan-A.apk"
 
-# ------------- Parse URL --------------
 parsed = urlparse(url)
 domain = parsed.hostname
 logging.info(f"Parsed domain/IP: {domain}")
 
-# ------------- DNS Lookup --------------
 try:
     ip = socket.gethostbyname(domain)
     logging.info(f"Resolved IP: {ip}")
 except Exception as e:
-    ip = domain  # use IP as-is if domain is already IP
+    ip = domain 
     logging.warning(f"DNS resolution failed: {e}")
 
-# ------------- WHOIS Lookup --------------
 try:
     whois_info = whois.whois(domain)
     with open("whois_info.txt", "w") as f:
@@ -42,7 +37,6 @@ try:
 except Exception as e:
     logging.warning(f"WHOIS lookup failed: {e}")
 
-# ------------- IP Geolocation --------------
 try:
     obj = IPWhois(ip)
     results = obj.lookup_rdap()
@@ -52,7 +46,6 @@ try:
 except Exception as e:
     logging.warning(f"IP WHOIS lookup failed: {e}")
 
-# ------------- HTTP Headers & Status --------------
 try:
     response = requests.get(url, timeout=10)
     with open("http_response_headers.txt", "w") as f:
@@ -63,7 +56,6 @@ try:
 except Exception as e:
     logging.warning(f"HTTP request failed: {e}")
 
-# ------------- SSL Certificate (if HTTPS) --------------
 if parsed.scheme == 'https':
     try:
         context = ssl.create_default_context()
@@ -78,8 +70,6 @@ if parsed.scheme == 'https':
 else:
     logging.info("Skipping SSL cert check (non-HTTPS URL)")
 
-# ------------- VirusTotal (Optional) --------------
-# Optional: Put your VirusTotal API key below to enable scanning
 VT_API_KEY = ""
 if VT_API_KEY:
     try:
@@ -102,4 +92,4 @@ if VT_API_KEY:
 else:
     logging.info("VirusTotal check skipped (no API key provided)")
 
-logging.info("====== Investigation Complete ======")
+logging.info("Investigation Complete")
