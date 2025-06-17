@@ -57,7 +57,7 @@ AIzaSyDQsXbqmP-LlT6Msh_aLfTUXs2WmpTnd6w
 
 **File Type:**
 ```bash
-$ file scam.apk
+$ file scam.apk (Renamed from Mezaan-A.apk)
 ```
 scam.apk: Android package (APK), with classes.dex, with APK Signing Block
 ### SHA256 Hash:
