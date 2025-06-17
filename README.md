@@ -99,7 +99,7 @@ Partial extraction achieved. Resources and AndroidManifest.xml recovered, but cr
 
 | Type       | Value                      |
 |------------|----------------------------|
-| URL        | https://slug.vercel.app/meezanapp |
+| URL        | http://43.154.209.241/You-Meeza |
 | IP Address | 43.154.209.241             |
 | APK Download Link | http://43.154.209.241/You-Meezan/download.php?file=Meezan-A.apk |
 
