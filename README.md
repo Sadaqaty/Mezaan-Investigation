@@ -4,6 +4,9 @@
 
 This repository contains the results of an investigation into a malicious APK file identified as part of a scam circulating on Facebook. The scam attempts to deceive users through a fake interface and exfiltrate sensitive data. All relevant artifacts, including the APK, extracted files, hashes, and analysis details, have been documented here. This information is being shared with the Mezaan team to assist in taking appropriate action against the threat and preventing further user compromise.
 
+![URL](https://github.com/user-attachments/assets/3686c584-2ccc-40f6-a485-69e8f5c1b16c)
+![phishing page](https://github.com/user-attachments/assets/96a2956b-8118-4ba0-97e1-21f490f6a1f7)
+
 ## Threat Assessment
 
 **Risk Level:** High  
