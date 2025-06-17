@@ -7,6 +7,10 @@ This repository contains the results of an investigation into a malicious APK fi
 ![URL](https://github.com/user-attachments/assets/3686c584-2ccc-40f6-a485-69e8f5c1b16c)
 ![phishing page](https://github.com/user-attachments/assets/96a2956b-8118-4ba0-97e1-21f490f6a1f7)
 
+## Malicious Payload.
+
+![image](https://github.com/user-attachments/assets/13e5e9ed-b7c8-43d1-b3a1-b0726a3f2bc9)
+
 ## Threat Assessment
 
 **Risk Level:** High  
@@ -23,8 +27,10 @@ This repository contains the results of an investigation into a malicious APK fi
 - **File Size:** 8.7MB (notably larger than legitimate banking apps)
 - **Certificate:** Self-signed (no valid digital signature)
 
-### 🔒 API Key Forensics: AIzaSyDQsXbqmP-LlT6Msh_aLfTUXs2WmpTnd6w
-
+### 🔒 API Key Forensics:
+```
+AIzaSyDQsXbqmP-LlT6Msh_aLfTUXs2WmpTnd6w
+```
 - **Source Found**: Extracted from `scam_extracted/classes2.dex`
 - **Type**: Google API Key (appears valid in format)
 - **Size**: 39 characters
